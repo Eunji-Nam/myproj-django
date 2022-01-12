@@ -4,4 +4,5 @@ from blog.models import Post
 
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
-    pass
+    list_display = ["id", "title"]
+    search_fields = ["title"]
